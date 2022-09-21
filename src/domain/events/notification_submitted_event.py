@@ -11,7 +11,6 @@ class NotificationSubmittedEvent(DomainEvent):
         self.id_residence = id_residence,
         self.props = props
 
-    
     @property
     def get_notification_data(self) -> dict:
         """return notified data"""
