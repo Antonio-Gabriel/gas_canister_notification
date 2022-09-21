@@ -9,5 +9,4 @@ def test_residence_entity():
         building=46,
         block='24'
     ))
-    
     assert residence.get_id is 1
