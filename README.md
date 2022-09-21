@@ -18,11 +18,12 @@ Run the docker script, install python env and install the packages on env of pyt
 
 This project was build using [Python v3]() and uses the following techologies:
 
+- [Flask]() - For make the apis.
 - [Pytest]() - For unit testing.
 - [Pylint]() - For validate the convention.
-- [Flask]() - For make the apis.
-- [SocketIO]() - For real time interactions.
 - [Kafka]() - For messaging.
+- [SocketIO]() - For real time interactions.
+- [Pre-commit]() - For identifying simple issues before submission to code review.
 
 Other techs:
 - [Docker]() - For containerization.
