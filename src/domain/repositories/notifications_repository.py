@@ -10,7 +10,7 @@ class ResidenceProps:
     building: int
     block: str
 
-class NotificationsRepository(ABC):
+class INotificationsRepository(ABC):
     """repository for persist historic of notifications"""
 
     @abstractmethod
