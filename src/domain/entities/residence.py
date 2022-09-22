@@ -13,10 +13,10 @@ class Residence:
     '''Residence entity'''
 
     def __init__(self, id_residence: int, props: Type[ResidenceProps]) -> None:
-        self.id_residence = id_residence
+        self.__id_residence = id_residence
         self.props = props
 
     @property
     def get_id(self):
         """return residence id"""
-        return self.id_residence
+        return self.__id_residence
