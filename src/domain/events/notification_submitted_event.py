@@ -21,5 +21,5 @@ class NotificationSubmittedEvent(DomainEvent):
         }
 
 
-    def __str__(self) -> str:
+    def __repr__(self) -> str:
         return f"NotificationSubmitted(id_residence={self.id_residence}, props={self.props})"
