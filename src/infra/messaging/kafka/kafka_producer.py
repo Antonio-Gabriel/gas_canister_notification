@@ -14,3 +14,4 @@ class KafkaProducer:
         """send message to queue"""
 
         self.__producer.send(topic, body)
+        self.__producer.flush()
