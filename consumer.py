@@ -1,6 +1,6 @@
 from src.infra.messaging.kafka.kafka_consumer import KafkaConsumer
 
-_instance = KafkaConsumer('gas_canister.new_notification')
+_instance = KafkaConsumer()
 
 consumer = _instance.get_consumer_data
 consumer.subscribe(['gas_canister.new_notification'])
