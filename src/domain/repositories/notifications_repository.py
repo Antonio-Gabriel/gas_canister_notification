@@ -18,3 +18,9 @@ class INotificationsRepository(ABC):
         """persist notifications history into storage"""
 
         raise NotImplementedError('Method not implemented')
+
+    @abstractmethod
+    async def find_by_residence(self, residence_id: int):
+        """find by residence"""
+
+        raise NotImplementedError('Method not implemented')
