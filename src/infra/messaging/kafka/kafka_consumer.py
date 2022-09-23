@@ -4,9 +4,8 @@ from kafka import KafkaConsumer as KafkaConsumerInstance
 class KafkaConsumer:
     """consumer iterator"""
     
-    def __init__(self, topic: str) -> None:
-        self.__consumer = KafkaConsumerInstance(
-            topic,
+    def __init__(self) -> None:
+        self.__consumer = KafkaConsumerInstance(            
             bootstrap_servers='localhost:9092',
             auto_offset_reset='latest',    
             enable_auto_commit=True,
