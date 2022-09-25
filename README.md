@@ -1,18 +1,24 @@
 # Gas Canister Notification
 
-An application that notify on the owner to some residence over the level of your gas canister.  
+An application that notifies the homeowner about the level of their gas canister.
 
-To avoid that the app have an error because several residences notify at once i added a message brocker 
-and for notify on real time, socketIO, this is a test for try real time notify and queue, because we will
-install in many houses the system. So we are monitoring several houses at once.
+As a way to prevent the app from dying due to the large data responses that the server tells the owner about the level of their gas canister, I added message queue (Kafka) and socket for real-time interactions.
 
-For the backend i used python that is a script language, i thought to use mysql but in the moment i don't know.
-For messaging i used Kafka and socketIO for real time interactions per events.
+The idea is that the project works in several residences at once, and Helps the owner of the same to have the best control of the condition of the gas cylinder
 
 ## Getting Started
 
-Run the docker script, install python env and install the packages on env of python. After etc.
+For run, first open your bash and execute this command:
 
+```bash
+docker-compose up --build
+```
+the command runs the zookeeper and kafka. After start:
+
+```bash
+python3 sms_server.py
+python3 main.py
+```
 
 # Technology Stack
 
@@ -31,7 +37,7 @@ Other techs:
 
 # Feactures
 
-- [ ] Make that the house publishe on queue the state of gas canister and notify per phone number to owner of the residence.
+- [x] Make that the house publishe on queue the state of gas canister and notify per phone number to owner of the residence.
 The first notification is only to owner of residence by message and the last send to owner and agence of gas.
 
 - [ ] After the owner can get the new gas canister clicking on the button  'Request new gas canister' in app.tada Contributing
