@@ -19,9 +19,12 @@ class NotificationCommunicatorHandler(Handler):
         producer = KafkaProducer()
         residence = await self.__residences_repository.find_by_residence(event.id_residence)
         
+        if not residence:
+            raise Exception("Residence don't exists")
+
         producer.send('gas_canister.new_notification', {
-            "building": residence['building'],
-            "owner": residence['owner'],
-            "block": residence['block'],
-            "contacts": residence['contacts']
+            "building": event.props.building,
+            "owner": event.props.owner,
+            "block": event.props.block,
+            "contacts": event.props.contacts
         })
