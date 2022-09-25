@@ -20,6 +20,8 @@ def connection(msg):
 def handle_notification(data):
     """watch the broadcast that send a notification"""
 
+    # I need to add the notification controller here and finish the rule
+
     print('received notification: ' + data)
 
 if __name__ == '__main__':
