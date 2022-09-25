@@ -13,7 +13,7 @@ class ResidenceRepository(IResidenceRepository):
                 "contacts": [923432333, 934543222]
             }
         ]
-        
+    
     async def find_by_residence(self, residence_id: int) -> list:
         """find by residence"""
         
