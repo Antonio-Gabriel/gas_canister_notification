@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Sms(ABC):
+class ISms(ABC):
     """send sms to phone"""
 
     @abstractmethod
