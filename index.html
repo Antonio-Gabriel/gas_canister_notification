@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io</title>
+  </head>
+  <body>
+    <script type="module">
+      import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+
+      const socket = io('http://127.0.0.1:5000')
+
+      socket.on('connect', () => {
+        socket.emit('connected', `User ${Math.random()} had just connected`)
+
+        let observer = 1
+
+        if (observer === 1) {
+          socket.emit(
+            'notification',
+            JSON.stringify({
+              id: '1',
+              owner: 'António Gabriel',
+              residence: 'Angola',
+            }),
+          )
+        }
+      })
+    </script>
+  </body>
+</html>
